@@ -60,24 +60,14 @@ function checkAnswer(isTrue) {
     nextButton.style.display = "block";
 }
 
-// Função para avançar para o próximo flashcard
-function nextFlashcard() {
-    // Habilitar o botão
-    buttonEnabled = true;
+// Função para reiniciar as perguntas
+function restartQuiz() {
+    flashcardIndex = 0;
+    showFlashcard();
 
-    var flashcardContainer = document.getElementById("curiosity-container");
+    var buttonContainer = document.getElementById("button-container");
+    buttonContainer.style.display = "block";
 
-    // Verificar se há mais flashcards
-    if (flashcardIndex < flashcards.length - 1) {
-        flashcardIndex++;
-        showFlashcard();
-    } else {
-        flashcardContainer.innerHTML = "<p>Fim das curiosidades!</p>";
-        var buttonContainer = document.getElementById("button-container");
-        buttonContainer.style.display = "none";
-    }
-
-    // Ocultar o botão "Próxima Curiosidade"
     var nextButton = document.getElementById("next-button");
     nextButton.style.display = "none";
 }
@@ -92,7 +82,27 @@ document.getElementById("false-button").addEventListener("click", function() {
 });
 
 // Event listener para o botão "Próxima Curiosidade"
-document.getElementById("next-button").addEventListener("click", nextFlashcard);
+document.getElementById("next-button").addEventListener("click", function() {
+    // Verificar se há mais flashcards
+    if (flashcardIndex < flashcards.length - 1) {
+        flashcardIndex++;
+        showFlashcard();
+    } else {
+        var flashcardContainer = document.getElementById("curiosity-container");
+        flashcardContainer.innerHTML = "<p>Fim das curiosidades!</p>";
+
+        var buttonContainer = document.getElementById("button-container");
+        buttonContainer.innerHTML = `
+            <button id="restart-button">Reiniciar</button>
+        `;
+
+        var restartButton = document.getElementById("restart-button");
+        restartButton.addEventListener("click", restartQuiz);
+    }
+
+    var nextButton = document.getElementById("next-button");
+    nextButton.style.display = "none";
+});
 
 // Exibir o primeiro flashcard ao carregar a página
 showFlashcard();
