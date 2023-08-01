@@ -13,6 +13,9 @@ var flashcards = [
     }
 ];
 
+// Variável para controlar se o botão está habilitado
+var buttonEnabled = true;
+
 // Função para exibir o flashcard atual
 function showFlashcard() {
     var flashcardContainer = document.getElementById("curiosity-container");
@@ -27,6 +30,14 @@ function showFlashcard() {
 
 // Função para verificar a resposta do usuário
 function checkAnswer(isTrue) {
+    // Verificar se o botão está habilitado
+    if (!buttonEnabled) {
+        return;
+    }
+
+    // Desabilitar o botão
+    buttonEnabled = false;
+
     var flashcard = flashcards[flashcardIndex];
     var flashcardElement = document.querySelector(".flashcard");
 
@@ -51,6 +62,9 @@ function checkAnswer(isTrue) {
 
 // Função para avançar para o próximo flashcard
 function nextFlashcard() {
+    // Habilitar o botão
+    buttonEnabled = true;
+
     var flashcardContainer = document.getElementById("curiosity-container");
 
     // Verificar se há mais flashcards
@@ -65,7 +79,6 @@ function nextFlashcard() {
     var nextButton = document.getElementById("next-button");
     nextButton.style.display = "none";
 }
-
 
 // Event listeners para os botões "Verdade" e "Mito"
 document.getElementById("true-button").addEventListener("click", function() {
