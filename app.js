@@ -66,6 +66,7 @@ function nextFlashcard() {
     nextButton.style.display = "none";
 }
 
+
 // Event listeners para os botões "Verdade" e "Mito"
 document.getElementById("true-button").addEventListener("click", function() {
     checkAnswer(true);
