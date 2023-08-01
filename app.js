@@ -1,4 +1,3 @@
-
 const curiosities = [
     {
         question: "Beber álcool ajuda a se aquecer no frio",
@@ -14,22 +13,18 @@ const curiosities = [
 
 let currentIndex = 0;
 
-const curiosityQuestion = document.createElement("p");
-curiosityQuestion.classList.add("curiosity-question");
-
-const curiosityAnswer = document.createElement("p");
-curiosityAnswer.classList.add("curiosity-answer");
-
-const curiosityExplanation = document.createElement("p");
-curiosityExplanation.classList.add("curiosity-explanation");
-
+const curiosityContainer = document.getElementById("curiosity-container");
 const nextButton = document.getElementById("next-button");
 
 function showCuriosity() {
     const currentCuriosity = curiosities[currentIndex];
-    curiosityQuestion.textContent = currentCuriosity.question;
-    curiosityAnswer.textContent = currentCuriosity.answer;
-    curiosityExplanation.textContent = currentCuriosity.explanation;
+    curiosityContainer.innerHTML = `
+        <div class="flashcard">
+            <p class="curiosity-question">${currentCuriosity.question}</p>
+            <p class="curiosity-answer">${currentCuriosity.answer}</p>
+            <p class="curiosity-explanation">${currentCuriosity.explanation}</p>
+        </div>
+    `;
 }
 
 function nextCuriosity() {
@@ -43,10 +38,5 @@ function nextCuriosity() {
 }
 
 nextButton.addEventListener("click", nextCuriosity);
-
-const curiosityContainer = document.getElementById("curiosity-container");
-curiosityContainer.appendChild(curiosityQuestion);
-curiosityContainer.appendChild(curiosityAnswer);
-curiosityContainer.appendChild(curiosityExplanation);
 
 showCuriosity();
