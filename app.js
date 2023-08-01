@@ -38,3 +38,6 @@ function nextCuriosity() {
 nextButton.addEventListener("click", nextCuriosity);
 
 showCuriosity();
+
+
+
