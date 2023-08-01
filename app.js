@@ -4,14 +4,12 @@ var flashcards = [
     {
         question: "Beber álcool ajuda a se aquecer no frio",
         answer: "Mito!",
-        explanation: "- Explicação: O álcool dilata os vasos sanguíneos, o que pode dar uma sensação de calor temporária. No entanto, essa sensação não aumenta a temperatura corporal e pode até levar a uma perda de calor mais rápida.",
-        isTrue: false // Adicione essa propriedade para verificar se a resposta é verdadeira ou falsa
+        explanation: "- Explicação: O álcool dilata os vasos sanguíneos, o que pode dar uma sensação de calor temporária. No entanto, essa sensação não aumenta a temperatura corporal e pode até levar a uma perda de calor mais rápida."
     },
     {
         question: "O álcool é uma substância psicoativa que pode causar dependência",
         answer: "Verdade!",
-        explanation: "- Fundamento: O álcool é uma substância que afeta o sistema nervoso central e pode levar ao desenvolvimento de dependência física e psicológica.",
-        isTrue: true // Adicione essa propriedade para verificar se a resposta é verdadeira ou falsa
+        explanation: "- Fundamento: O álcool é uma substância que afeta o sistema nervoso central e pode levar ao desenvolvimento de dependência física e psicológica."
     }
 ];
 
@@ -51,10 +49,17 @@ function checkAnswer(isTrue) {
     nextButton.style.display = "block";
 }
 
-// Função para reiniciar a enquete
-function restartQuiz() {
-    flashcardIndex = 0;
-    showFlashcard();
+// Função para avançar para o próximo flashcard
+function nextFlashcard() {
+    var flashcardContainer = document.getElementById("curiosity-container");
+
+    // Verificar se há mais flashcards
+    if (flashcardIndex < flashcards.length - 1) {
+        flashcardIndex++;
+        showFlashcard();
+    } else {
+        flashcardContainer.innerHTML = "<p>Fim das curiosidades!</p>";
+    }
 
     // Ocultar o botão "Próxima Curiosidade"
     var nextButton = document.getElementById("next-button");
@@ -71,19 +76,7 @@ document.getElementById("false-button").addEventListener("click", function() {
 });
 
 // Event listener para o botão "Próxima Curiosidade"
-document.getElementById("next-button").addEventListener("click", function() {
-    if (flashcardIndex < flashcards.length - 1) {
-        flashcardIndex++;
-        showFlashcard();
-    } else {
-        // Exibir o botão "Reiniciar Enquete"
-        var restartButton = document.getElementById("restart-button");
-        restartButton.style.display = "block";
-    }
-});
-
-// Event listener para o botão "Reiniciar Enquete"
-document.getElementById("restart-button").addEventListener("click", restartQuiz);
+document.getElementById("next-button").addEventListener("click", nextFlashcard);
 
 // Exibir o primeiro flashcard ao carregar a página
 showFlashcard();
