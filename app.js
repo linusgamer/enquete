@@ -6,10 +6,15 @@ var flashcards = [
         answer: "Mito!",
         explanation: " O álcool dilata os vasos sanguíneos, o que pode dar uma sensação de calor temporária. No entanto, essa sensação não aumenta a temperatura corporal e pode até levar a uma perda de calor mais rápida."
     },
-  {
+    {
         question: "O álcool é uma substância psicoativa que pode causar dependência.",
         answer: "Verdade!",
         explanation: " O álcool é uma substância que afeta o sistema nervoso central e pode levar ao desenvolvimento de dependência física e psicológica."
+    },
+    {
+        question: "O consumo excessivo de álcool pode levar a problemas de saúde,como doenças do fígado e do coração.",
+        answer: "Verdade!",
+        explanation: " O consumo excessivo de álcool está associado a uma série de problemas de saúde, incluindo doenças hepáticas, como cirrose, e doenças cardiovasculares, como hipertensão e arritmias."
     },
 ];
 
