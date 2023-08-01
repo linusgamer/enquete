@@ -51,7 +51,7 @@ uma série de problemas de saúde, incluindo doenças hepáticas, como cirrose, 
         answer: "Mito!",
         explanation: "O álcool prejudica a coordenação motora, o tempo de reação e a capacidade de julgamento, o que torna a condução sob efeito de álcool extremamente perigosa. Beber álcool antes de dirigir aumenta significativamente o risco de acidentes de trânsito."
 
-    }
+    },
 ];
 
 // Variável para controlar se o botão está habilitado
