@@ -11,34 +11,41 @@ const curiosities = [
     }
 ];
 
-function createCuriosityCard(curiosity) {
-    const curiosityCard = document.createElement("div");
-    curiosityCard.classList.add("flashcard");
+let currentIndex = 0;
 
-    const questionElement = document.createElement("p");
-    questionElement.textContent = curiosity.question;
-    curiosityCard.appendChild(questionElement);
+const curiosityQuestion = document.createElement("p");
+curiosityQuestion.classList.add("curiosity-question");
 
-    const answerElement = document.createElement("p");
-    answerElement.classList.add("curiosity-answer");
-    answerElement.textContent = curiosity.answer;
-    curiosityCard.appendChild(answerElement);
+const curiosityAnswer = document.createElement("p");
+curiosityAnswer.classList.add("curiosity-answer");
 
-    const explanationElement = document.createElement("p");
-    explanationElement.classList.add("curiosity-explanation");
-    explanationElement.textContent = curiosity.explanation;
-    curiosityCard.appendChild(explanationElement);
+const curiosityExplanation = document.createElement("p");
+curiosityExplanation.classList.add("curiosity-explanation");
 
-    curiosityCard.addEventListener("click", () => {
-        curiosityCard.classList.toggle("show-answer");
-    });
+const nextButton = document.getElementById("next-button");
 
-    return curiosityCard;
+function showCuriosity() {
+    const currentCuriosity = curiosities[currentIndex];
+    curiosityQuestion.textContent = currentCuriosity.question;
+    curiosityAnswer.textContent = currentCuriosity.answer;
+    curiosityExplanation.textContent = currentCuriosity.explanation;
 }
 
-const curiosityContainer = document.getElementById("curiosity-container");
+function nextCuriosity() {
+    currentIndex++;
+    if (currentIndex < curiosities.length) {
+        showCuriosity();
+    } else {
+        currentIndex = 0;
+        showCuriosity();
+    }
+}
 
-curiosities.forEach((curiosity) => {
-    const curiosityCard = createCuriosityCard(curiosity);
-    curiosityContainer.appendChild(curiosityCard);
-});
+nextButton.addEventListener("click", nextCuriosity);
+
+const curiosityContainer = document.getElementById("curiosity-container");
+curiosityContainer.appendChild(curiosityQuestion);
+curiosityContainer.appendChild(curiosityAnswer);
+curiosityContainer.appendChild(curiosityExplanation);
+
+showCuriosity();
