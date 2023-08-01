@@ -24,7 +24,6 @@ var flashcards = [
 ];
 
 
-
 // Variável para controlar se o botão está habilitado
 var buttonEnabled = true;
 
