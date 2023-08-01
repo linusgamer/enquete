@@ -46,10 +46,12 @@
 .btn-primary {
     background-color: #2ecc71;
     border-color: #2ecc71;
-    text-align: center; /* Adicione essa propriedade */
-    display: block; /* Adicione essa propriedade */
-    margin: 0 auto; /* Adicione essa propriedade */
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    color: #ffffff; /* Adicione essa propriedade */
 }
+
 
 .footer {
     background-color: #2c3e50;
