@@ -1,7 +1,12 @@
 .banner {
-    background-color: #f2f2f2;
+    background-color: #2c3e50;
     padding: 20px;
     text-align: center;
+    color: #ffffff;
+}
+
+.description {
+    margin-top: 20px;
 }
 
 .curiosity-container {
@@ -12,19 +17,22 @@
 }
 
 .flashcard {
-    background-color: #f2f2f2;
+    background-color: #34495e;
     padding: 20px;
     margin-bottom: 20px;
     cursor: pointer;
+    color: #ffffff;
 }
 
 .flashcard:hover {
-    background-color: #e0e0e0;
+    background-color: #2c3e50;
 }
 
 .show-answer .curiosity-answer,
 .show-answer .curiosity-explanation {
     display: block;
+    color: #2c3e50;
+    font-weight: bold;
 }
 
 .curiosity-answer,
@@ -32,9 +40,14 @@
     display: none;
 }
 
-.footer {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
+.btn-primary {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
 }
 
+.footer {
+    background-color: #2c3e50;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
