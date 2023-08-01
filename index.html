@@ -2,15 +2,19 @@
 <html>
 <head>
     <title>Curiosidades sobre o Álcool</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Curiosidades sobre o Álcool</h1>
     <div id="curiosity-container">
-        <h2 id="curiosity-question"></h2>
-        <p id="curiosity-answer"></p>
-        <p id="curiosity-explanation"></p>
+        <div class="flashcard" onclick="showAnswer(0)">
+            <p id="curiosity-question">Beber álcool ajuda a se aquecer no frio</p>
+        </div>
+        <div class="flashcard" style="display: none;">
+            <h5 id="curiosity-answer">Mito!</h5>
+            <p id="curiosity-explanation">- Explicação: O álcool dilata os vasos sanguíneos, o que pode dar uma sensação de calor temporária. No entanto, essa sensação não aumenta a temperatura corporal e pode até levar a uma perda de calor mais rápida.</p>
+        </div>
     </div>
-    <button id="next-button">Próxima Curiosidade</button>
 
     <script src="app.js"></script>
 </body>
