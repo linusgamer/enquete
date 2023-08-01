@@ -10,19 +10,27 @@
 <body>
     <header class="banner">
         <h1>Enquete sobre mitos e verdades sobre o uso do álcool</h1>
-        <p class="description">Trabalho da disciplina Politicas Publicas na Enfermagem</p>
         <p class="description">Aqui estão algumas curiosidades sobre o uso do álcool. Clique nos flashcards para revelar as respostas!</p>
     </header>
 
     <div class="container">
         <div id="curiosity-container" class="curiosity-container"></div>
-        <button id="next-button" class="btn btn-primary">Próxima Curiosidade</button>
+        <div class="buttons-container">
+            <button id="true-button" class="btn btn-true">Verdade</button>
+            <button id="false-button" class="btn btn-false">Mito</button>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div id="popup-content" class="popup-content">
+            <p id="popup-message" class="popup-message"></p>
+            <button id="popup-close" class="popup-close">Fechar</button>
+        </div>
     </div>
 
     <footer class="footer">
-        <p>Desenvolvido por Linus </p>
+        <p>Desenvolvido por [Seu Nome]</p>
     </footer>
-    
 
     <script src="app.js"></script>
 </body>
