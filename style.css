@@ -1,0 +1,21 @@
+.flashcard {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.flashcard:hover {
+    background-color: #e0e0e0;
+}
+
+#curiosity-answer,
+#curiosity-explanation {
+    display: none;
+}
+
+.flashcard.show-answer #curiosity-answer,
+.flashcard.show-answer #curiosity-explanation {
+    display: block;
+}
