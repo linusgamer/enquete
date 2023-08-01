@@ -11,30 +11,34 @@ const curiosities = [
     }
 ];
 
-let currentIndex = 0;
+function createCuriosityCard(curiosity) {
+    const curiosityCard = document.createElement("div");
+    curiosityCard.classList.add("flashcard");
 
-const curiosityQuestion = document.getElementById("curiosity-question");
-const curiosityAnswer = document.getElementById("curiosity-answer");
-const curiosityExplanation = document.getElementById("curiosity-explanation");
-const nextButton = document.getElementById("next-button");
+    const questionElement = document.createElement("p");
+    questionElement.textContent = curiosity.question;
+    curiosityCard.appendChild(questionElement);
 
-function showCuriosity() {
-    const currentCuriosity = curiosities[currentIndex];
-    curiosityQuestion.textContent = currentCuriosity.question;
-    curiosityAnswer.textContent = currentCuriosity.answer;
-    curiosityExplanation.textContent = currentCuriosity.explanation;
+    const answerElement = document.createElement("p");
+    answerElement.classList.add("curiosity-answer");
+    answerElement.textContent = curiosity.answer;
+    curiosityCard.appendChild(answerElement);
+
+    const explanationElement = document.createElement("p");
+    explanationElement.classList.add("curiosity-explanation");
+    explanationElement.textContent = curiosity.explanation;
+    curiosityCard.appendChild(explanationElement);
+
+    curiosityCard.addEventListener("click", () => {
+        curiosityCard.classList.toggle("show-answer");
+    });
+
+    return curiosityCard;
 }
 
-function nextCuriosity() {
-    currentIndex++;
-    if (currentIndex < curiosities.length) {
-        showCuriosity();
-    } else {
-        currentIndex = 0;
-        showCuriosity();
-    }
-}
+const curiosityContainer = document.getElementById("curiosity-container");
 
-nextButton.addEventListener("click", nextCuriosity);
-
-showCuriosity();
+curiosities.forEach((curiosity) => {
+    const curiosityCard = createCuriosityCard(curiosity);
+    curiosityContainer.appendChild(curiosityCard);
+});
