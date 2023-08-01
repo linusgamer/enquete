@@ -1,3 +1,4 @@
+
 const curiosities = [
     {
         question: "Beber álcool ajuda a se aquecer no frio",
