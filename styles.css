@@ -51,3 +51,9 @@
     text-align: center;
     color: #ffffff;
 }
+
+@media (max-width: 768px) {
+    .curiosity-container {
+        margin-top: 20px;
+    }
+}
