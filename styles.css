@@ -13,7 +13,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Adicione essa propriedade */
     margin-top: 50px;
+    height: 100vh; /* Adicione essa propriedade */
 }
 
 .flashcard {
@@ -22,6 +24,7 @@
     margin-bottom: 20px;
     cursor: pointer;
     color: #ffffff;
+    text-align: center; /* Adicione essa propriedade */
 }
 
 .flashcard:hover {
@@ -31,7 +34,7 @@
 .show-answer .curiosity-answer,
 .show-answer .curiosity-explanation {
     display: block;
-    color: #f0f1f2;
+    color: #2c3e50;
     font-weight: bold;
 }
 
@@ -43,6 +46,9 @@
 .btn-primary {
     background-color: #2ecc71;
     border-color: #2ecc71;
+    text-align: center; /* Adicione essa propriedade */
+    display: block; /* Adicione essa propriedade */
+    margin: 0 auto; /* Adicione essa propriedade */
 }
 
 .footer {
