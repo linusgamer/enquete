@@ -100,11 +100,16 @@ document.getElementById("next-button").addEventListener("click", function() {
         flashcardContainer.innerHTML = "<p>Fim das curiosidades!</p>";
 
         var buttonContainer = document.getElementById("button-container");
-        buttonContainer.style.display = "none";
+        buttonContainer.innerHTML = `
+            <button id="restart-button">Reiniciar</button>
+        `;
 
-        var nextButton = document.getElementById("next-button");
-        nextButton.style.display = "none";
+        var restartButton = document.getElementById("restart-button");
+        restartButton.addEventListener("click", restartQuiz);
     }
+
+    var nextButton = document.getElementById("next-button");
+    nextButton.style.display = "none";
 });
 
 // Exibir o primeiro flashcard ao carregar a página
