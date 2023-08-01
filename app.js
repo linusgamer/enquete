@@ -19,12 +19,16 @@ const nextButton = document.getElementById("next-button");
 function showCuriosity() {
     const currentCuriosity = curiosities[currentIndex];
     curiosityContainer.innerHTML = `
-        <div class="flashcard">
+        <div class="flashcard" onclick="showAnswer(this)">
             <p class="curiosity-question">${currentCuriosity.question}</p>
             <p class="curiosity-answer">${currentCuriosity.answer}</p>
             <p class="curiosity-explanation">${currentCuriosity.explanation}</p>
         </div>
     `;
+}
+
+function showAnswer(flashcard) {
+    flashcard.classList.add("show-answer");
 }
 
 function nextCuriosity() {
