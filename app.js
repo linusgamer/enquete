@@ -6,6 +6,7 @@ var flashcards = [
         answer: "Mito!",
         explanation: " O álcool dilata os vasos sanguíneos, o que pode dar uma sensação de calor temporária. No entanto, essa sensação não aumenta a temperatura corporal e pode até levar a uma perda de calor mais rápida."
     },
+	
 
    {
         question: "O álcool é uma substância psicoativa que pode causar dependência.",
