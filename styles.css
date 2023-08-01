@@ -10,20 +10,16 @@
     background-color: #e0e0e0;
 }
 
-.flashcard .show-answer {
-    background-color: #e0e0e0;
-}
-
-#curiosity-question {
-    font-weight: bold;
-}
-
-#curiosity-answer,
-#curiosity-explanation {
+.flashcard .curiosity-answer,
+.flashcard .curiosity-explanation {
     display: none;
 }
 
-.flashcard.show-answer #curiosity-answer,
-.flashcard.show-answer #curiosity-explanation {
+.flashcard.show-answer .curiosity-answer,
+.flashcard.show-answer .curiosity-explanation {
     display: block;
+}
+
+.curiosity-question {
+    font-weight: bold;
 }
