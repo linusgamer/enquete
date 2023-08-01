@@ -58,6 +58,12 @@ function checkAnswer(isTrue) {
     // Exibir o botão "Próxima Curiosidade"
     var nextButton = document.getElementById("next-button");
     nextButton.style.display = "block";
+
+    // Verificar se é a última pergunta
+    if (flashcardIndex === flashcards.length - 1) {
+        nextButton.innerHTML = "Reiniciar";
+        nextButton.addEventListener("click", restartQuiz);
+    }
 }
 
 // Função para reiniciar as perguntas
@@ -70,6 +76,8 @@ function restartQuiz() {
 
     var nextButton = document.getElementById("next-button");
     nextButton.style.display = "none";
+    nextButton.innerHTML = "Próxima Curiosidade";
+    nextButton.removeEventListener("click", restartQuiz);
 }
 
 // Event listeners para os botões "Verdade" e "Mito"
@@ -92,16 +100,11 @@ document.getElementById("next-button").addEventListener("click", function() {
         flashcardContainer.innerHTML = "<p>Fim das curiosidades!</p>";
 
         var buttonContainer = document.getElementById("button-container");
-        buttonContainer.innerHTML = `
-            <button id="restart-button">Reiniciar</button>
-        `;
+        buttonContainer.style.display = "none";
 
-        var restartButton = document.getElementById("restart-button");
-        restartButton.addEventListener("click", restartQuiz);
+        var nextButton = document.getElementById("next-button");
+        nextButton.style.display = "none";
     }
-
-    var nextButton = document.getElementById("next-button");
-    nextButton.style.display = "none";
 });
 
 // Exibir o primeiro flashcard ao carregar a página
