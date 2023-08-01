@@ -11,6 +11,7 @@ const curiosities = [
     }
 ];
 
+
 let currentIndex = 0;
 
 const curiosityContainer = document.getElementById("curiosity-container");
