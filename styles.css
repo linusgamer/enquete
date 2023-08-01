@@ -39,10 +39,14 @@
     margin-left: 10px;
 }
 
-.btn-true:hover,
+.btn-true:hover {
+    background-color: #004d00;
+    color: white;
+}
+
 .btn-false:hover {
-    background-color: white;
-    color: #ffffff;
+    background-color: #800000;
+    color: white;
 }
 
 /* Estilos para o botão "Próxima Curiosidade" */
