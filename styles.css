@@ -1,25 +1,29 @@
-.flashcard {
+.banner {
     background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.flashcard:hover {
-    background-color: #e0e0e0;
-}
-
-.flashcard .curiosity-answer,
-.flashcard .curiosity-explanation {
-    display: none;
-}
-
-.flashcard.show-answer .curiosity-answer,
-.flashcard.show-answer .curiosity-explanation {
-    display: block;
+    padding: 20px;
+    text-align: center;
 }
 
 .curiosity-question {
     font-weight: bold;
+}
+
+.curiosity-answer,
+.curiosity-explanation {
+    display: none;
+}
+
+.curiosity-container {
+    margin-bottom: 20px;
+}
+
+.curiosity-container.show-answer .curiosity-answer,
+.curiosity-container.show-answer .curiosity-explanation {
+    display: block;
+}
+
+.footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
 }
