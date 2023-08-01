@@ -10,6 +10,14 @@
     background-color: #e0e0e0;
 }
 
+.flashcard .show-answer {
+    background-color: #e0e0e0;
+}
+
+#curiosity-question {
+    font-weight: bold;
+}
+
 #curiosity-answer,
 #curiosity-explanation {
     display: none;
