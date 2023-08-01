@@ -73,8 +73,6 @@ function nextFlashcard() {
         showFlashcard();
     } else {
         flashcardContainer.innerHTML = "<p>Fim das curiosidades!</p>";
-        var buttonContainer = document.getElementById("button-container");
-        buttonContainer.style.display = "none";
     }
 
     // Ocultar o botão "Próxima Curiosidade"
