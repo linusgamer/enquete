@@ -20,32 +20,23 @@
     height: 100vh;
 }
 
-/* Estilos para o flashcard */
-.flashcard {
-    background-color: #34495e;
-    padding: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
+/* Estilos para os botões "Verdade" e "Mito" */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-true {
+    background-color: #2ecc71;
     color: #ffffff;
-    text-align: center;
+    margin-right: 10px;
 }
 
-.flashcard:hover {
-    background-color: #2c3e50;
-}
-
-/* Estilos para a resposta e explicação */
-.show-answer .curiosity-answer,
-.show-answer .curiosity-explanation {
-    display: block;
-    color: #f0f1f2;
-    font-weight: bold;
-}
-
-
-.curiosity-answer,
-.curiosity-explanation {
-    display: none;
+.btn-false {
+    background-color: #e74c3c;
+    color: #ffffff;
+    margin-left: 10px;
 }
 
 /* Estilos para o botão "Próxima Curiosidade" */
@@ -53,7 +44,7 @@
     background-color: #2ecc71;
     border-color: #2ecc71;
     text-align: center;
-    display: block;
+    display: none;
     margin: 20px auto;
     color: #ffffff;
 }
@@ -64,11 +55,4 @@
     padding: 20px;
     text-align: center;
     color: #ffffff;
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .container {
-        margin-top: 20px;
-    }
 }
