@@ -16,6 +16,11 @@ var flashcards = [
         answer: "Verdade!",
         explanation: " O consumo excessivo de álcool está associado a uma série de problemas de saúde, incluindo doenças hepáticas, como cirrose, e doenças cardiovasculares, como hipertensão e arritmias."
     },
+    {
+        question: " Beber café ou tomar banho frio pode ajudar a diminuir o efeito do álcool.",
+        answer: "Mito!",
+        explanation: "O café e o banho frio não têm a capacidade de diminuir o efeito do álcool no organismo. A única forma de diminuir o efeito do álcool é esperar o corpo metabolizá-lo naturalmente."
+    },
 ];
 
 
